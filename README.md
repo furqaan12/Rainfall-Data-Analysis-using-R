@@ -1,2 +1,3 @@
 # Rainfall-Data-Analysis-using-R
 Rainfall Data Analysis using R: Creating Interactive Histograms and R Markdown Reports
+The "Rainfall Analysis" project is a data analysis project that focuses on rainfall data. The project will involve importing rainfall data, cleaning and wrangling it, and creating various visualizations such as histograms using R programming language. The goal is to provide insights into the rainfall patterns and trends in a given region or location. The project will also include creating a reproducible report in R Markdown that will document the data cleaning, analysis, and visualization steps taken. This report can be used as a reference for future analysis or as a way to communicate the findings to others.
