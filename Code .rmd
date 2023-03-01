@@ -1,0 +1,126 @@
+---
+title: "Assignment-1"
+author: "Furqaan Khan"
+date: "2023-02-15"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+# create a vector for rainfall amounts
+```{r}
+rainfall <- c(0.1,0.6,33.8,1.9,9.6,4.3,33.7,0.3,0.0,0.1)
+```
+
+# calculate the mean and standard deviation
+```{r}
+mean_rainfall <- mean(rainfall)
+sd_rainfall <- sd(rainfall)
+print(mean(rainfall))
+print(sd(rainfall))
+```
+
+# display the cumulative rainfall
+```{r}
+cum_rainfall <- cumsum(rainfall)
+cum_rainfall
+```
+
+# find the day with the highest and lowest rainfall
+```{r}
+max_rainfall_day <- which.max(rainfall)
+min_rainfall_day <- which.min(rainfall)
+print(max_rainfall_day)
+print(min_rainfall_day)
+```
+
+```{r}
+cat("Day with highest rainfall:", max_rainfall_day, "\n")
+cat("Day with lowest rainfall:", min_rainfall_day)
+```
+# create a vector of 20 random letters from the alphabet
+```{r}
+rand_letters <- sample(LETTERS, 20, replace = TRUE)
+sort(rand_letters)
+```
+
+# create a 10 x 10 matrix with random numbers
+```{r}
+mat <- matrix(runif(100), nrow = 10, ncol = 10)
+print(mat)
+```
+
+# calculate the column means and standard deviation
+```{r}
+col_means <- colMeans(mat)
+col_sd <- apply(mat, 2, sd)
+print(col_means)
+print(col_sd)
+```
+
+# create a matrix with 100 columns and 10 rows
+```{r}
+mat2 <- matrix(runif(1000), nrow = 10, ncol = 100)
+print(mat2)
+```
+# calculate the column means and plot a histogram
+```{r}
+col_means2 <- colMeans(mat2)
+hist(col_means2)
+```
+
+# create another matrix with 1000 columns and 10 rows
+```{r}
+mat3 <- matrix(runif(10000), nrow = 10, ncol = 1000)
+print(mat3)
+```
+# calculate the column means and plot a histogram
+```{r pressure, echo=FALSE}
+col_means3 <- colMeans(mat3)
+hist(col_means3)
+```
+
+# read the rainfall data from problem 1
+```{r}
+rainfall <- c(0.1,0.6,33.8,1.9,9.6,4.3,33.7,0.3,0.0,0.1)
+```
+
+# subset of data where rainfall is larger than 20
+```{r}
+rainfall_subset <- rainfall[rainfall > 20]
+print(rainfall_subset)
+```
+
+# mean rainfall for days where rainfall was at least 4
+```{r}
+mean_rainfall_subset <- mean(rainfall[rainfall >= 4])
+print(mean_rainfall_subset)
+```
+
+# subset where rainfall is either 0 or 0.6
+```{r}
+rainfall_subset2 <- rainfall[rainfall == 0 | rainfall == 0.6]
+print(rainfall_subset2)
+```
+
